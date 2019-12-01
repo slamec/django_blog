@@ -18,5 +18,5 @@ from django.contrib import admin
  
 urlpatterns = [
     url(r'^blog/', include('blog.urls')), #tady rikam, ze v blog app jsou nejake url
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', .site.urls),
 ]
