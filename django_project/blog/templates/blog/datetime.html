@@ -8,7 +8,7 @@
  
     {# This is a comment #}
  
-    {# check the existence of now variable in the template using if tag #}
+    {% include 'blog/nav.html' %}
  
     {% if now %}   
         <p><b>Current date and time is {{ now }}</b></p>
