@@ -1,4 +1,5 @@
-{% extends "base.html" %}        {# Link to mother template base #}
+{% extends "base.html" %}        {# Link to parent template base, #}
+                                {# when something is changed in base its changed here e.g. content #}
  
   {% block content %} 
  
@@ -12,4 +13,9 @@
 
     <p>BASE_DIR : {{ base_dir }} </p>
  
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }} {# parent footer #}
+    <p>All rights reserved</p> {# this template footer #}
 {% endblock %}
