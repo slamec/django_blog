@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Current Time and Date</title>
-</head>
-<body>
+{% extends "base.html" %}        {# Link to mother template base #}
  
-    {# This is a comment #}
- 
-    {% include template_name %}
+  {% block content %} 
  
     {% if now %}   
         <p><b>Current date and time is {{ now }}</b></p>
@@ -17,8 +9,7 @@
     {% endif %}
  
     <p>Current scheme: {{ request.scheme }}</p>
-    
+
     <p>BASE_DIR : {{ base_dir }} </p>
  
-</body>
-</html>
+{% endblock %}
