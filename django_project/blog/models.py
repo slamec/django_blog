@@ -26,7 +26,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     content = models.TextField()
-    pub_date = models.DateTimeField(auto_now_add=True)
+    publication_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
